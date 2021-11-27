@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <taskdef resource="org/cruxframework/crux/tools/crux-tools.xml">
+    <classpath>
+      <path refid="maven.compile.classpath"/>
+    </classpath>
+  </taskdef>
+  <serviceMapper projectDir="C:\Users\rooba\Desktop\totalpractice\saturday\target/saturday">
+    <classpath>
+      <path refid="maven.compile.classpath"/>
+      <pathelement path="C:\Users\rooba\Desktop\totalpractice\saturday\target/saturday/WEB-INF//classes/"/>
+    </classpath>
+  </serviceMapper>
+  <cruxcompiler outputDir="C:\Users\rooba\Desktop\totalpractice\saturday\target/saturday" keepPagesGeneratedFiles="true" webDir="C:\Users\rooba\Desktop\totalpractice\saturday\target/saturday" pagesOutputDir="C:\Users\rooba\Desktop\totalpractice\saturday\target/saturday" pageFileExtension="html" srcDir="C:\Users\rooba\Desktop\totalpractice\saturday\src\main\java" outputCharset="UTF-8" doNotPreCompileJavaSource="true">
+    <classpath>
+      <path refid="maven.compile.classpath"/>
+    </classpath>
+    <jvmarg value="-Xmx768M"/>
+    <jvmarg value="-Xms256M"/>
+    <arg value="-localWorkers"/>
+    <arg value="2"/>
+  </cruxcompiler>
+</target>
+</project>
